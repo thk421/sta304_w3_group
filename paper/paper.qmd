@@ -1,13 +1,11 @@
 ---
-title: "My title"
-subtitle: "My subtitle if needed"
+title: "Marriages in Toronto Before and After Covid"
 author: 
-  - First author
-  - Another author
+  - Tina Kim
 thanks: "Code and data are available at: LINK."
 date: today
 date-format: long
-abstract: "First sentence. Second sentence. Third sentence. Fourth sentence."
+abstract: "This is my abstract"
 format: pdf
 number-sections: true
 bibliography: references.bib
