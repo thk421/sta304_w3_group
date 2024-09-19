@@ -8,34 +8,33 @@
 # Pre-requisites: Know where to find Marriage Licence Statistics data
 
 #### Workspace setup ####
-library(knitr)
-library(janitor)
-library(lubridate)
-library(opendatatoronto)
 library(tidyverse)
 
+
 #### Simulate data ####
+set.seed(304)
+
+# Define the start and end date
+start_date <- as.Date("2018-01-01")
+end_date <- as.Date("2023-12-31")
+
+# Set the number of random dates you want to generate
+number_of_dates <- 100
 
 data <-
   tibble(
-    date =,
-    number_of_marriage = rpois
+    dates = as.Date(
+      runif(
+        n = number_of_dates,
+        min = as.numeric(start_date),
+        max = as.numeric(end_date)
+      ),
+      origin = "1970-01-01"
+    ),
+    number_of_marriage = rpois(n = number_of_dates, lambda = 15)
   )
 
-set.seed(123)  
 
-# Generate dates
-start_date <- as.Date("2017-12-31")
-end_date <- as.Date("2024-12-31")
-dates <- seq.Date(start_date, end_date, by = "month")
-
-marriage_licenses <- data.frame(
-  Date = dates,
-  Number_of_Licences = rpois(length(dates), lambda = 10)
-)
-
-head(marriage_licenses)
-
-#### Write csv
+#### Write_csv
 write_csv(data, file = "data/raw_data/simulated.csv")
 
