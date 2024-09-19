@@ -37,9 +37,9 @@ The remainder of this paper is structured as follows. @sec-mydatasection
 # label: fig-marriage
 # ech0: false
 
-data |>
-  ggplot(aes(x = date, y = marriage_licenses)) +
-  geom_point()
+# data |>
+  # ggplot(aes(x = date, y = marriage_licenses)) +
+  # geom_point()
 ```
 
 Talk more about it.
